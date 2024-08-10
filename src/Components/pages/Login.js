@@ -1,9 +1,6 @@
 import loginImage from "../../assets/images/login.svg";
-import classes from "../../Styles/Login.module.css";
-import Button from "../Button";
-import Form from "../Form";
 import Illustration from "../Illustration";
-import TextInput from "../TextInput";
+import LoginForm from "../LoginForm";
 
 export default function Login() {
   return (
@@ -12,20 +9,7 @@ export default function Login() {
 
       <div className="column">
         <Illustration img={loginImage} />
-        <Form className={classes.login}>
-          <TextInput
-            icon="alternate_email"
-            type="text"
-            placeholder="Enter email"
-          />
-          <TextInput icon="lock" type="password" placeholder="Enter password" />
-          <Button>
-            <span>Submit Now</span>
-          </Button>
-          <div class="info">
-            Don't have an account? <a href="signup.html">Signup</a> instead.
-          </div>
-        </Form>
+        <LoginForm />
       </div>
     </div>
   );
