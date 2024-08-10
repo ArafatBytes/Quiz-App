@@ -24,7 +24,8 @@ export default function useFetch(url, method, header) {
       }
     }
     fetchApi();
-  }, [url, method, header]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return {
     loading,
